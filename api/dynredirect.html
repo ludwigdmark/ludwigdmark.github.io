@@ -9,10 +9,12 @@
 </head>
 
 <body>
+    <code id="qry-display"></code>
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const myParam = urlParams.get('myParam');
-        alert(myParam)
+        const qryString = window.location.search;
+        const qryObject = new URLSearchParams( qryString );
+        const qryJSON = JSON.stringify( qryObject, null, 4 );
+        document.getElementById('qry-display').innerText( qryJSON );
     </script>
 </body>
 
