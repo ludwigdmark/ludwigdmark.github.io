@@ -11,10 +11,20 @@
 <body>
     <code id="qry-display"></code>
     <script>
-        const qryString = window.location.search;
-        const qryObject = new URLSearchParams( qryString );
+
+        var qryString = location.search.substring(1);
+
+        var qryObject = JSON.parse( '{"' + 
+            decodeURI(search)
+                .replace(/"/g, '\\"')
+                .replace(/&/g, '","')
+                .replace(/=/g,'":"') + 
+            '"}');
+
         const qryJSON = JSON.stringify( qryObject, null, 4 );
+
         document.getElementById('qry-display').innerText = qryJSON;
+        
     </script>
 </body>
 
