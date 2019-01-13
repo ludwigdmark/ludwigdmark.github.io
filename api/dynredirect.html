@@ -9,10 +9,12 @@
 </head>
 
 <body>
-    <code id="qry-display"></code>
+    <label>URL Query Object:</label>
+    <br>
+    <pre><code id="qry-display"></code></pre>
     <script>
 
-        var qryString = location.search.substring( 1 );
+        var qryString = window.location.search.substring( 1 );
 
         var qryObject = JSON.parse( '{"' + 
             decodeURI( qryString )
