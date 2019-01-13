@@ -16,6 +16,8 @@
 
         var qryString = window.location.search.substring( 1 );
 
+        alert(qryString)
+
         var qryObject = JSON.parse( '{"' + 
             decodeURI( qryString )
                 .replace( /"/g, '\\"' )
