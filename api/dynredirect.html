@@ -1,10 +1,22 @@
-<script>
-    const Http = new XMLHttpRequest();
-    const url='https://jsonplaceholder.typicode.com/posts';
-    Http.open("GET", url);
-    Http.send();
-    Http.onreadystatechange=(e)=>{
-        alert(Http.responseText);
-        
-    }
-</script>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://js.zapjs.com/js/download.js"></script>
+    <div id="1"></div>
+    <script>
+        const Http = new XMLHttpRequest();
+        const url='https://cors-escape.herokuapp.com/https://keepvid.app/videos?url=kt0g4dWxEBo';
+        Http.open("GET", url);
+        Http.send();
+        var div = $("#1");
+        Http.onreadystatechange=(e)=>{
+            $(Http.responseText).find('a').each((v, i)=>{
+                if ($(i).attr("href").indexOf('googlevideo.com/videoplayback?') > -1 &&
+                $(i).attr("href").indexOf('.mp4') > -1 &&
+                $(i).attr("href").indexOf('ratebypass') > -1) {
+                    download($(i).attr("href") + '.mp4', "video.mp4", "video/mp4");
+                }
+            })
+        }
+    </script>
+</body>
+
