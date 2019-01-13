@@ -271,11 +271,11 @@ header {
 
 .downloads {
   display: block;
-  padding-left: 50px;
+  /* padding-left: 50px; */
   color: #f2f2f2;
   position: relative;
   height: 70px;
-  background: url(../images/download.svg) no-repeat center left;
+  /* background: url(../stylesheets/fontawesome/svgs/solid/user.svg) no-repeat center left; */
   background-size: 25px 20px;
 }
 
@@ -373,4 +373,13 @@ Small Device Styles
     max-width: 480px;
     font-size: 11px;
   }
+}
+
+
+
+
+
+#pages-icon {
+  color:white; 
+  padding-right: 25px;
 }
