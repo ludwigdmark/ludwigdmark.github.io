@@ -345,3 +345,15 @@
 			font-size: 0.6em;
 			font-style: italic;		
 		}
+
+		.cert-trans-view {
+			display: inline;
+			padding-top: -50px;
+		}
+
+		.page-title {
+			font-size: 2em !important;  
+			font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+			font-style: italic;
+			color: #0F4C81;
+		}
